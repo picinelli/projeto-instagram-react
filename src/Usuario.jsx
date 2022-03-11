@@ -1,10 +1,20 @@
 export default function Usuario() {
     return (
+        <Conta
+        src="assets/img/catanacomics.svg"
+        apelidoUsuario="catanacomics"
+        nomeUsuario="Catana"
+        />
+    )
+}
+
+function Conta(props) {
+    return (
         <div class="usuario">
-            <img src="assets/img/catanacomics.svg" />
+            <img src={props.src} />
             <div class="texto">
-            <strong>catanacomics</strong>
-            Catana
+            <strong>{props.apelidoUsuario}</strong>
+            {props.nomeUsuario}
             </div>
         </div>
     )
