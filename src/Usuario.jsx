@@ -9,12 +9,14 @@ export default function Usuario() {
 }
 
 function Conta(props) {
+    const {src, apelidoUsuario, nomeUsuario} = props
+
     return (
         <div class="usuario">
-            <img src={props.src} />
+            <img src={src} />
             <div class="texto">
-            <strong>{props.apelidoUsuario}</strong>
-            {props.nomeUsuario}
+            <strong>{apelidoUsuario}</strong>
+            {nomeUsuario}
             </div>
         </div>
     )
