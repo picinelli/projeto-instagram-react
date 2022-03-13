@@ -1,11 +1,12 @@
 export default function Posts() {
     return (
-        <div class="posts">
+        <div className="posts">
             {
             posts.map(post => {
                 const {srcUsuario, usuario, srcConteudo, srcCurtidas, textoConta, textoPessoas} = post;
                 return (
                     <Post
+                        key={usuario}
                         srcUsuario={srcUsuario} 
                         usuario={usuario} 
                         srcConteudo={srcConteudo} 
@@ -43,23 +44,23 @@ function Post(props) {
     const {srcUsuario, usuario, srcConteudo, srcCurtidas, textoConta, textoPessoas} = props
 
     return (
-        <div class="post">
-        <div class="topo">
-            <div class="usuario">
+        <div className="post">
+        <div className="topo">
+            <div className="usuario">
             <img src={srcUsuario} />
             {usuario}
             </div>
-            <div class="acoes">
+            <div className="acoes">
             <ion-icon name="ellipsis-horizontal"></ion-icon>
             </div>
         </div>
 
-        <div class="conteudo">
+        <div className="conteudo">
             <img src={srcConteudo} />
         </div>
 
-        <div class="fundo">
-            <div class="acoes">
+        <div className="fundo">
+            <div className="acoes">
             <div>
                 <ion-icon name="heart-outline"></ion-icon>
                 <ion-icon name="chatbubble-outline"></ion-icon>
@@ -70,9 +71,9 @@ function Post(props) {
             </div>
             </div>
 
-            <div class="curtidas">
+            <div className="curtidas">
             <img src={srcCurtidas} />
-            <div class="texto">
+            <div className="texto">
             Curtido por <strong>{textoConta}</strong> e <strong>{textoPessoas}</strong>
             </div>
             </div>

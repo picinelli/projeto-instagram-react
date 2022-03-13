@@ -12,9 +12,9 @@ function Conta(props) {
     const {src, apelidoUsuario, nomeUsuario} = props
 
     return (
-        <div class="usuario">
+        <div className="usuario">
             <img src={src} />
-            <div class="texto">
+            <div className="texto">
             <strong>{apelidoUsuario}</strong>
             {nomeUsuario}
             </div>

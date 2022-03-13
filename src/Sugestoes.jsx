@@ -1,7 +1,7 @@
 export default function Sugestoes() {
     return (
-        <div class="sugestoes">
-            <div class="titulo">
+        <div className="sugestoes">
+            <div className="titulo">
             Sugestões para você
             <div>Ver tudo</div>
             </div>
@@ -9,7 +9,7 @@ export default function Sugestoes() {
             {sugestoes.map(sugestao => {
                 const {src, usuario, razao} = sugestao
                 return (
-                    <Sugestao src={src} usuario={usuario} razao={razao} />
+                    <Sugestao key={usuario} src={src} usuario={usuario} razao={razao} />
                 )
         })}
         </div>
@@ -48,16 +48,16 @@ function Sugestao(props) {
     const {src, usuario, razao} = props
 
     return (
-        <div class="sugestao">
-        <div class="usuario">
+        <div className="sugestao">
+        <div className="usuario">
             <img src={src} />
-            <div class="texto">
-            <div class="nome">{usuario}</div>
-            <div class="razao">{razao}</div>
+            <div className="texto">
+            <div className="nome">{usuario}</div>
+            <div className="razao">{razao}</div>
             </div>
         </div>
 
-        <div class="seguir">Seguir</div>
+        <div className="seguir">Seguir</div>
         </div>
     )
 }
