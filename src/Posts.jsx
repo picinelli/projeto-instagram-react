@@ -3,7 +3,7 @@ export default function Posts() {
         <div class="posts">
             {
             posts.map(post => {
-                                const {srcUsuario, usuario, srcConteudo, srcCurtidas, textoConta, textoPessoas} = post;
+                const {srcUsuario, usuario, srcConteudo, srcCurtidas, textoConta, textoPessoas} = post;
                 return (
                     <Post
                         srcUsuario={srcUsuario} 

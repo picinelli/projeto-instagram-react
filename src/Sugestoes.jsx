@@ -6,11 +6,11 @@ export default function Sugestoes() {
             <div>Ver tudo</div>
             </div>
 
-        {sugestoes.map(sugestao => {
-            const {src, usuario, razao} = sugestao
-            return (
-                <Sugestao src={src} usuario={usuario} razao={razao} />
-            )
+            {sugestoes.map(sugestao => {
+                const {src, usuario, razao} = sugestao
+                return (
+                    <Sugestao src={src} usuario={usuario} razao={razao} />
+                )
         })}
         </div>
     )
